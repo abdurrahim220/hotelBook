@@ -9,9 +9,18 @@ export default {
 
     },
     container:{
-      padding : "10rem"
-    }
+      padding : {
+        md: "8rem",
+        lg: "10rem",
+        sm: "5rem",
+      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
   },
   plugins: [],
 }
-
