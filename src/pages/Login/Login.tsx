@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "react-query";
 import { useAppContext } from "../../context/AppContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as apiClient from "../../api/api-client";
 
 export type SignInFormData = {
@@ -61,7 +61,11 @@ const Login = () => {
             <span className="text-red-600">{errors.password.message}</span>
           )}
         </label>
-        <span>
+        
+        <span className="flex justify-between items-center">
+          <div className="text-sm">
+            Not Registered? <Link to="/register">Create an account here</Link>
+          </div>
           <button
             className="bg-blue-600 text-white p-2 font-bold hover:bg-blue-500 text-xl"
             type="submit"
