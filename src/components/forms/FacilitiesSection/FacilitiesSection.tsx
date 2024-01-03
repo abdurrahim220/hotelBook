@@ -8,8 +8,8 @@ const FacilitiesSection = () => {
     <div>
       <h2>Facilities</h2>
       <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {hotelFacilities.map((facility) => (
-          <label className="text-sm flex items-center gap-1">
+        {hotelFacilities.map((facility,index) => (
+          <label key={index} className="text-sm flex items-center gap-1">
             <input
               type="checkbox"
               value={facility}

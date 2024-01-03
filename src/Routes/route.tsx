@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 
 import AddHotel from "../pages/AddHotel/AddHotel";
 import MyHotels from "../pages/MyHotels/MyHotels";
+import EditHotel from "../pages/EditHotel/EditHotel";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/add-hotel",
         element: <AddHotel />,
+      },
+      {
+        path: "/edit-hotel/:hotelId",
+        element: <EditHotel />,
       },
       {
         path: "/my-hotels",
