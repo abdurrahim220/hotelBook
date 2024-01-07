@@ -3,7 +3,7 @@ import { useSearchContext } from "../../context/SearchContext";
 import * as apiClient from "../../api/api-client";
 import { useState } from "react";
 import SearchResultCard from "../../components/Search/SearchResultCard";
-
+import Pagination from "../../components/pagination/Pagination";
 
 const Search = () => {
   const search = useSearchContext();
@@ -35,14 +35,20 @@ const Search = () => {
         <div className="flex justify-between items-center">
           <span className="text-xl font-bold">
             {hotelData?.pagination.total} Hotels found
-            {search.destination? `in ${search.destination}`:""}
+            {search.destination ? `in ${search.destination}` : ""}
           </span>
           {/* todo sort option */}
-
         </div>
-        {hotelData?.data.map((hotel)=>(
-          <SearchResultCard hotel={hotel}/>
+        {hotelData?.data.map((hotel) => (
+          <SearchResultCard hotel={hotel} />
         ))}
+        <div>
+          <Pagination
+            page={hotelData?.pagination.page || 1}
+            pages={hotelData?.pagination.page || 1}
+            onPageChange={(page) => setPage(page)}
+          />
+        </div>
       </div>
     </div>
   );
