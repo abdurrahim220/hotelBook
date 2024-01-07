@@ -7,6 +7,7 @@ import Login from "../pages/Login/Login";
 import AddHotel from "../pages/AddHotel/AddHotel";
 import MyHotels from "../pages/MyHotels/MyHotels";
 import EditHotel from "../pages/EditHotel/EditHotel";
+import Search from "../pages/Search/Search";
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/my-bookings",
         element: <MyHotels />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ],
   },
